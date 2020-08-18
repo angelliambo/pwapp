@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { fetchWeather } from './api/fetchWeather'
+import { CityName } from './ui-kit/componets/city-name'
 import './App.css'
 
 const App = () => {
@@ -32,10 +33,8 @@ const App = () => {
     
     {weather.main && (
       <div className="city">
-        <h2 className="city-name">
-          <span>{weather.name}</span>
-          <sup>{weather.sys.country}</sup>
-        </h2>
+        <CityName city={weather} />
+        
         <div className="city-temp" >
           {Math.round(weather.main.temp)}
           <sup>&deg;C</sup>
