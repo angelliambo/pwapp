@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { fetchWeather } from './api/fetchWeather'
+import { Container, Row, Col } from 'react-grid'
 import { CityName } from './ui-kit/componets/city-name'
+import { CityTemp } from './ui-kit/componets/city-temp'
+import { AdditionalInfo } from './ui-kit/componets/additional-info'
 import './App.css'
 
 const App = () => {
@@ -21,32 +24,29 @@ const App = () => {
 
   return (
     <div className='main-container'>
-
-    <input
-    type='text'
-    className='search'
-    placeholder='Search...'
-    value={query}
-    onChange={(e)=> setQuery(e.target.value)}
-    onKeyPress={search}
-     />
-    
-    {weather.main && (
-      <div className="city">
-        <CityName city={weather} />
-        
-        <div className="city-temp" >
-          {Math.round(weather.main.temp)}
-          <sup>&deg;C</sup>
-        </div>
-        <div className="info">
-        <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
-        <p>{weather.weather[0].description}</p>
-        </div>
-      </div>
-    )}
-
-
+    <Container>
+      <Row>
+        <Col xs={12}>
+            <input
+            type='text'
+            className='search'
+            placeholder='Search...'
+            value={query}
+            onChange={(e)=> setQuery(e.target.value)}
+            onKeyPress={search}
+            />           
+        </Col>
+        <Col xs={12}>
+          {weather.main && (
+            <div className="city">
+              <CityName city={weather} />
+              <CityTemp temperature={weather} />
+              <AdditionalInfo  info={weather}/>
+            </div>
+          )}
+        </Col>
+      </Row>
+    </Container>
     </div>
   );
 }

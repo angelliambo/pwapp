@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-grid'
 import styled from 'styled-components'
 import {
   makeComponentWrapper,
@@ -25,16 +24,10 @@ export class CityName extends React.Component {
     const {city} = this.props
     return (
       <ComponentWrapper>
-        <Container>
-          <Row>
-            <Col xs={12}>
-              <CityNameObj>    
-                {city.name}
-                <CitySup>{city.sys.country}</CitySup>
-              </CityNameObj>
-            </Col>
-          </Row>
-        </Container>
+        <CityNameObj>    
+          {city.name}
+          <CitySup>{city.sys.country}</CitySup>
+        </CityNameObj>
       </ComponentWrapper>
     );
   }
