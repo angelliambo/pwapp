@@ -33,7 +33,10 @@ const App = () => {
     
     {weather.main && (
       <div className="city">
-        <CityName city={weather} />
+        <h2 className="city-name">
+          <span>{weather.name}</span>
+          <sup>{weather.sys.country}</sup>
+        </h2>
         
         <div className="city-temp" >
           {Math.round(weather.main.temp)}
