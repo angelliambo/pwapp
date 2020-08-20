@@ -20,6 +20,25 @@ html, body, #root {
   flex-direction: column;
 }
 
+.titulo-bienvenida{
+  color: white;
+  font-weight: bold;
+  line-height: 29px;
+  font-size: 28px;
+  margin: 0 auto;
+}
+
+.subtitulo-bienvenida{
+  color: rgb(196, 196, 196);
+  font-weight: bold;
+  line-height: 15px;
+  font-size: 12px;
+  max-width: 172px;
+  text-transform: lowercase;
+  margin: 10px auto;
+  text-align: center;
+}
+
 .search {
   outline: none;
   padding: 20px 7%;

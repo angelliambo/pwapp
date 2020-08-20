@@ -20,11 +20,13 @@ const App = () => {
 
   return (
     <div className='main-container'>
+      <h2 className="titulo-bienvenida">Bienvenidos</h2>
+      <p className="subtitulo-bienvenida">Ingrese una ciudad para obtener el clima actual</p>
 
     <input
     type='text'
     className='search'
-    placeholder='Search...'
+    placeholder='Buscar...'
     value={query}
     onChange={(e)=> setQuery(e.target.value)}
     onKeyPress={search}
