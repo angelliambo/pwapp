@@ -28,6 +28,7 @@ const App = () => {
     value={query}
     onChange={(e)=> setQuery(e.target.value)}
     onKeyPress={search}
+    name='serarch'
      />
     
     {weather.main && (
