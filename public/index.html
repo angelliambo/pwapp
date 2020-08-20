@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="Aplicacion para saber el clima de cualquier ciudad"
-      content="App de clima PWA con react"
+      name="descripcion"
+      content="Aplicacion para saber el clima de cualquier ciudad"
     />
     <link rel="apple-touch-icon" href="./images/logo.png" />
     <link rel="manifest" href="./manifest.json" />
@@ -21,13 +21,13 @@
          * creamos un "ServiceWorker" con el cual podremos mostrar notificaciones en dispositivos, 
          * o mostrar alguna notificacion si no estamos conectados
         */
-       if('serviceWorker' in navigator){
-         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./serviceworker.js')
-            .then((reg) => console.log('Registrado:', reg.scope))
-            .catch((err) => console.log ('Error:', err));
-         })
-       }
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
       </script>
     </div>
   </body>
