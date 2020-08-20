@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { fetchWeather } from './api/fetchWeather'
-import { CityName } from './ui-kit/componets/city-name'
 import './App.css'
 
 const App = () => {
