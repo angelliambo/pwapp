@@ -7,7 +7,7 @@ html, body, #root {
 }
 
 .main-container {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://hdwallpaper20.com/wp-content/uploads/2017/07/wallpaper-wp4001752.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://services.meteored.com/img/article/el-tiempo-y-el-clima-en-2019-que-ha-sucedido-mundialmente-221611-1.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -18,6 +18,25 @@ html, body, #root {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.titulo-bienvenida{
+  color: white;
+  font-weight: bold;
+  line-height: 29px;
+  font-size: 28px;
+  margin: 0 auto;
+}
+
+.subtitulo-bienvenida{
+  color: rgb(196, 196, 196);
+  font-weight: bold;
+  line-height: 15px;
+  font-size: 12px;
+  max-width: 172px;
+  text-transform: lowercase;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .search {
@@ -42,6 +61,22 @@ html, body, #root {
 
 
 
+
+.city sup {
+  font-size: 0.5em;
+}
+
+.city-name {
+  font-size: 2em;
+}
+
+.city-name sup {
+  padding: 0.2em 0.6em;
+  margin-left: 0.2em;
+  border-radius: 30px;
+  color: #fff;
+  background: #ff8c00;
+}
 
 .city-icon {
   margin-top: 10px;
